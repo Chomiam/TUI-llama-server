@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=TUI llama-server
+Comment=Terminal Dashboard & GPU/ROCm Manager for llama.cpp server
+Exec=tui-llama-server
+Icon=utilities-terminal
+Terminal=true
+Type=Application
+Categories=Development;Utility;System;
+Keywords=AI;LLM;llama;rocm;gpu;tui;

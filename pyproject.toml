@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tui-llama-server"
+version = "1.0.0"
+description = "Premium Terminal Dashboard & Manager for llama.cpp server with AMD ROCm and GPU auto-tuning for AI agents"
+readme = "README.md"
+authors = [{ name = "Chomiam" }]
+license = { text = "MIT" }
+keywords = ["llama", "llama-server", "llm", "rocm", "amd", "gpu", "tui", "textual", "ai-agents"]
+requires-python = ">=3.9"
+dependencies = [
+    "textual>=0.80.0",
+    "rich>=13.0.0",
+    "psutil>=5.9.0",
+    "gguf>=0.10.0",
+]
+
+[project.scripts]
+tui-llama-server = "tui_llama_server.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tui_llama_server*"]
+
+[tool.setuptools.package-data]
+tui_llama_server = ["ui/*.tcss"]

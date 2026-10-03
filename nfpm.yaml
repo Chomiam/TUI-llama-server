@@ -1,0 +1,30 @@
+# NFPM Configuration for tui-llama-server
+name: "tui-llama-server"
+arch: "amd64"
+platform: "linux"
+version: "1.0.0"
+release: "1"
+section: "utils"
+priority: "optional"
+maintainer: "Chomiam <https://github.com/Chomiam>"
+description: "Premium Terminal Dashboard & Manager for llama.cpp server with AMD ROCm and GPU auto-tuning for AI agents"
+vendor: "Chomiam"
+homepage: "https://github.com/Chomiam/TUI-llama-server"
+license: "MIT"
+
+contents:
+  - src: ./dist/tui-llama-server
+    dst: /usr/bin/tui-llama-server
+    file_info:
+      mode: 0755
+  - src: ./assets/tui-llama-server.desktop
+    dst: /usr/share/applications/tui-llama-server.desktop
+    file_info:
+      mode: 0644
+
+deb:
+  compression: xz
+
+rpm:
+  compression: lzma
+  group: Applications/System

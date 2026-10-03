@@ -1,0 +1,5 @@
+textual>=0.80.0
+rich>=13.0.0
+psutil>=5.9.0
+gguf>=0.10.0
+pyinstaller>=6.0.0
